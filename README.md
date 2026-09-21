@@ -4,22 +4,21 @@
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458.svg)](https://pandas.pydata.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Este repositório contém o notebook de análise de dados das **Intoxicações Exógenas do Sistema de Informação de Agravos de Notificação (SINAN/SUS)**, referente ao período de **2020 a 2024**. O projeto abrange desde o download automatizado de microdados até a higienização, padronização, enrich de dados geográficos e exportação para formatos otimizados para BI e Machine Learning.
+Este repositório contém o notebook de análise de dados das **Intoxicações Exógenas do Sistema de Informação de Agravos de Notificação (SINAN/SUS)**, referente ao período de **2006 a 2026**. O projeto abrange desde o download automatizado de microdados até a higienização, padronização, enrich de dados geográficos e exportação para formatos otimizados para BI e Machine Learning.
 
 ---
 
 ## 👩‍💻 Autoria e Desenvolvimento
 
 * **Autora:** Giedry Fernanda Trindade  
-* **Contato / LinkedIn:** [Inserir Link do LinkedIn/Contato, se aplicável]  
 * **Repositório:** [https://github.com/usuario/repositorio](https://github.com/usuario/repositorio)
 
 ---
 
 ## 🎯 Objetivos do Projeto
 
-* **Coleta e Consolidação:** Processar microdados epidemiológicos estaduais e nacionais do SINAN/DATASUS entre 2020 e 2024.
-* **Padronização e Qualidade:** Tratamento rigoroso de *data wrangling* para uniformização de códigos, categorias sanitárias e saneamento de inconsistências.
+* **Coleta e Consolidação:** Processar microdados epidemiológicos estaduais e nacionais do SINAN/DATASUS entre 2006 e 2026.
+* **Padronização e Qualidade:** Tratamento rigoroso de *data wrangling* para categorização de códigos.
 * **Geração de Métricas e Indicadores:** Preparação de bases limpas para suportar análises de impacto à saúde pública, perfil demográfico das vítimas e substâncias causadoras de intoxicação.
 * **Estruturação de Outputs:** Disponibilização de dados tratados e agregados prontos para ingestão em ferramentas de visualização (Power BI, Tableau) e modelos estatísticos.
 
@@ -45,7 +44,6 @@ O notebook executa um pipeline sequencial estruturado em 15 etapas de processame
 8. **Enriquecimento Geográfico (IBGE):** Cruzamento dos códigos de municípios de notificação e residência com tabelas de referência do IBGE para inclusão de nomes de cidades, UF e regiões.
 9. **Higienização de Textos e Valores Nulos:** Limpeza de strings, tratamento de valores ausentes (`NaN`/`Ignorado`) e preenchimento sistemático.
 10. **Tratamento e Classificação da Evolução do Caso:** Categorização do desfecho clínico (Cura, Óbito por intoxicação, Óbito por outra causa, Sequela, etc.).
-11. **Filtragem Epidemiológica e Deduplicação:** Remoção de registros duplicados e validação de critérios de inclusão conforme regras de negócio sanitárias.
 12. **Criação de Indicadores Agregados:** Geração de tabelas agrupadas com contagens por ano, UF, faixa etária, agente e evolução.
 13. **Geração da Tabela Fato Higienizada:** Consolidação dos dados detalhados (*granularidade no nível de notificação*) em formato colunar de alto desempenho.
 14. **Geração das Tabelas Dimensão:** Isolamento das entidades categóricas para composição do modelo relacional/Star Schema.
