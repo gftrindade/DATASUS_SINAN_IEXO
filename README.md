@@ -53,7 +53,7 @@ O notebook executa um pipeline sequencial estruturado em 14 etapas de processame
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Linguagem:** Python 3.8+
+* **Linguagem:** Python 3.9+
 * **Manipulação de Dados:** `pandas`, `numpy`
 * **Leitura de Dados Sanitários:** `pysus` / `dbfread` (para extração DATASUS/DBC)
 * **Ambiente de Desenvolvimento:** Jupyter Notebook / Google Colab
@@ -77,7 +77,7 @@ Ao final da execução do pipeline, são gerados os seguintes datasets na pasta 
 ## ⚙️ Requisitos e Instalação
 
 ### Pré-requisitos
-* Python 3.8 ou superior
+* Python 3.9 ou superior
 * Git
 
 ### Passo a Passo
@@ -90,21 +90,22 @@ Ao final da execução do pipeline, são gerados os seguintes datasets na pasta 
 
 2. **Criar e ativar um ambiente virtual (recomendado):**
    ```bash
-   python -m venv venv
+   pip install uv
+   uv venv .venv
    # Linux/macOS:
-   source venv/bin/activate
+   source .venv/bin/activate
    # Windows:
-   venv\Scripts\activate
+   .venv\Scripts\activate
    ```
 
 3. **Instalar as dependências:**
    ```bash
-   pip install -r requirements.txt
+   uv pip install -r requirements.txt
    ```
 
 4. **Executar o Notebook:**
    ```bash
-   jupyter notebook notebooks/analise_intoxicacoes_sinan.ipynb
+   uv run jupyter notebook notebooks/analise_intoxicacoes_sinan.ipynb
    ```
 
 ---
