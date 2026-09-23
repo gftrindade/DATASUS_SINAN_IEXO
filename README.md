@@ -17,7 +17,7 @@ Este repositório contém o notebook de análise de dados das **Intoxicações E
 
 ## 🎯 Objetivos do Projeto
 
-* **Coleta e Consolidação:** Processar microdados epidemiológicos estaduais e nacionais do SINAN/DATASUS entre 2006 e 2026.
+* **Coleta e Consolidação:** Processar microdados epidemiológicos  nacionais do SINAN/DATASUS entre 2006 e 2026.
 * **Padronização e Qualidade:** Tratamento rigoroso de *data wrangling* para categorização de códigos.
 * **Geração de Métricas e Indicadores:** Preparação de bases limpas para suportar análises de impacto à saúde pública, perfil demográfico das vítimas e substâncias causadoras de intoxicação.
 * **Estruturação de Outputs:** Disponibilização de dados tratados e agregados prontos para ingestão em ferramentas de visualização (Power BI, Tableau) e modelos estatísticos.
@@ -26,7 +26,7 @@ Este repositório contém o notebook de análise de dados das **Intoxicações E
 
 ## 🔄 Pipeline de Tratamento de Dados (15 Passos)
 
-O notebook executa um pipeline sequencial estruturado em 15 etapas de processamento e higienização:
+O notebook executa um pipeline sequencial estruturado em 14 etapas de processamento e higienização:
 
 ```
 [DATASUS / SINAN] ──> [1-3. Extração & Carga] ──> [4-7. Mapeamento & Limpeza]
@@ -45,8 +45,8 @@ O notebook executa um pipeline sequencial estruturado em 15 etapas de processame
 9. **Higienização de Textos e Valores Nulos:** Limpeza de strings, tratamento de valores ausentes (`NaN`/`Ignorado`) e preenchimento sistemático.
 10. **Tratamento e Classificação da Evolução do Caso:** Categorização do desfecho clínico (Cura, Óbito por intoxicação, Óbito por outra causa, Sequela, etc.).
 12. **Criação de Indicadores Agregados:** Geração de tabelas agrupadas com contagens por ano, UF, faixa etária, agente e evolução.
-13. **Geração da Tabela Fato Higienizada:** Consolidação dos dados detalhados (*granularidade no nível de notificação*) em formato colunar de alto desempenho.
-14. **Geração das Tabelas Dimensão:** Isolamento das entidades categóricas para composição do modelo relacional/Star Schema.
+13. **Fato Higienizado:** Consolidação dos dados detalhados (*granularidade no nível de notificação*) em formato colunar de alto desempenho.
+14. **Geração de Dimensão:** Isolamento das entidades categóricas para composição do modelo relacional/Star Schema.
 15. **Exportação Multi-formato:** Salvamento das bases processadas nos formatos `.csv` e `.parquet` para máxima compatibilidade e performance.
 
 ---
